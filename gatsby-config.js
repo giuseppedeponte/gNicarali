@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Nicarali`,
+    author: ``,
+    description: `Lire au Nicaragua. Pour que les enfants aient accès à la lecture. Pour que tous puissent s'instruire et se former. L'association Nicarali soutient le développement d'un réseau de bibliothèques publiques au Nicaragua.`,
+    siteUrl: `http://nicarali.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: ``,
     },
   },
   plugins: [
@@ -57,8 +57,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Nicarali`,
+        short_name: `Nicarali`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
