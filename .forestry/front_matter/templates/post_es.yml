@@ -1,0 +1,16 @@
+---
+label: post_es
+hide_body: false
+fields:
+- type: text
+  name: lang
+  label: lang
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: text
+  name: cover_url
+  label: cover_url
