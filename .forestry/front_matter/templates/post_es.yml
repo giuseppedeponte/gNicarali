@@ -20,5 +20,3 @@ fields:
 - type: text
   name: cover_url
   label: cover_url
-pages:
-- content/blog/es/test.md
