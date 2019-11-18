@@ -9,11 +9,15 @@ sections:
   label: Nicarali en espagnol
   create: all
   match: "**/*"
+  templates:
+  - post_es
 - type: directory
   path: content/blog/fr
   label: Actualités
   create: all
   match: "**/*"
+  templates:
+  - post_fr
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
