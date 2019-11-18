@@ -5,12 +5,12 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
-  path: content/es
+  path: content/blog/es
   label: Nicarali en espagnol
   create: all
   match: "**/*"
 - type: directory
-  path: content/fr
+  path: content/blog/fr
   label: Actualités
   create: all
   match: "**/*"
