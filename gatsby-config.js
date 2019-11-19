@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Nicarali`,
-    author: ``,
+    author: `Nicarali`,
     description: `Lire au Nicaragua. Pour que les enfants aient accès à la lecture. Pour que tous puissent s'instruire et se former. L'association Nicarali soutient le développement d'un réseau de bibliothèques publiques au Nicaragua.`,
     siteUrl: `http://nicarali.com/`,
     social: {
