@@ -1,43 +1,51 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import style from "../assets/style/nav.module.css"
+
+const pages = {
+  association: {
+    to: "/association",
+    label: "L'association",
+  },
+  partenaires: {
+    to: "/partenaires",
+    label: "Nos partenaires",
+  },
+  frBlog: {
+    to: "/fr/blog",
+    label: "Actualités",
+  },
+  esBlog: {
+    to: "/es/blog",
+    label: "Nicarali en español",
+  },
+  participer: {
+    to: "/participer",
+    label: "Participer",
+  },
+  contact: {
+    to: "/contact",
+    label: "Contactez-nous",
+  },
+}
+
 export const Nav = props => {
   return (
     <nav>
-      <ul
-        style={{
-          fontSize: 12,
-          marginLeft: 0,
-          display: `flex`,
-          flexWrap: `wrap`,
-          listStyle: `none`,
-          padding: 0,
-          lineHeight: 1.25,
-        }}
-      >
-        <li>
-          <Link to="/association">L'association</Link>
-        </li>
-        &emsp;
-        <li>
-          <Link to="/partenaires">Nos partenaires</Link>
-        </li>
-        &emsp;
-        <li>
-          <Link to="/fr/blog">Actualités</Link>
-        </li>
-        &emsp;
-        <li>
-          <Link to="/es/blog">Nicarali en espagnol</Link>
-        </li>
-        &emsp;
-        <li>
-          <Link to="/participer">Participer</Link>
-        </li>
-        &emsp;
-        <li>
-          <Link to="/contact">Contactez-nous</Link>
-        </li>
+      <ul className={style.list}>
+        {Object.entries(pages).map(([id, page]) => (
+          <li key={id}>
+            <Link
+              className={style.link}
+              activeClassName={style.linkActive}
+              to={page.to}
+            >
+              {page.label}
+            </Link>
+            &emsp;
+          </li>
+        ))}
       </ul>
     </nav>
   )

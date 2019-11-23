@@ -17,12 +17,12 @@ class Layout extends React.Component {
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: rhythm(20),
+          maxWidth: rhythm(21),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
         <Header isMain={isRoot} title={title} />
-        <Nav />
+        <Nav location={location} />
         <main>{children}</main>
         <footer />
       </div>
