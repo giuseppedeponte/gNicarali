@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 
 import style from "../assets/style/home.module.css"
 
@@ -16,8 +15,7 @@ class Home extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Accueil" />
         <article>
-          <h3>Pourquoi ?</h3>
-          <figure className={style.right}>
+          <figure>
             <img
               src="http://nicarali.files.wordpress.com/2010/08/img11.jpg?w=500&amp;h=332"
               alt="Peinture murale à Chagüitillo"
@@ -26,6 +24,7 @@ class Home extends React.Component {
             />
             <figcaption>Peinture murale à Chagüitillo</figcaption>
           </figure>
+          <h3>Pourquoi ?</h3>
           <p>
             En France, les projets de solidarité envers les pays plus démunis
             vont surtout vers les pays africains. Une histoire commune
@@ -45,8 +44,8 @@ class Home extends React.Component {
             l’éducation et à la culture par la lecture.
           </p>
         </article>
-        <article className={style.box}>
-          <h4>Le mot de la présidente</h4>
+        <article>
+          <h3>Le mot de la présidente</h3>
           <p>
             Ma rencontre avec l’Amérique latine, faite à l’adolescence, s’est
             depuis enrichie de mon expérience dans l’enseignement de l’espagnol.
@@ -60,8 +59,7 @@ class Home extends React.Component {
           </p>
         </article>
         <article>
-          <h3>Pourquoi le Nicaragua ?</h3>
-          <figure className="left">
+          <figure>
             <img
               src="http://nicarali.files.wordpress.com/2010/08/mapa2.jpg?w=257&amp;h=228"
               alt="L'Amérique Centrale"
@@ -70,6 +68,7 @@ class Home extends React.Component {
             />
             <figcaption>L'Amérique Centrale</figcaption>
           </figure>
+          <h3>Pourquoi le Nicaragua ?</h3>
           <p>
             La population du Nicaragua est très jeune, plus de la moitié de la
             population a moins de vingt ans. 56% de la population enfantine vit
@@ -77,9 +76,7 @@ class Home extends React.Component {
             dénutrition chronique). Plus de 600.000 enfants de moins de quinze
             ans travaillent pour participer au budget familial.
             <br />
-            <Link to="/fr/23-08-2010-pourquoi-le-nicaragua.html">
-              Lire la suite
-            </Link>
+            <Link to="/fr/23-08-2010-pourquoi-le-nicaragua">Lire la suite</Link>
           </p>
         </article>
         <article>
@@ -102,8 +99,7 @@ class Home extends React.Component {
           </p>
         </article>
         <article>
-          <h3>Pourquoi Chagüitillo ?</h3>
-          <figure className={style.right}>
+          <figure>
             <img
               src="http://nicarali.files.wordpress.com/2010/07/image3.jpg?w=400&amp;h=268"
               alt="Classe unique à l'école de Monte Grande"
@@ -112,6 +108,7 @@ class Home extends React.Component {
             />
             <figcaption>Classe unique à l'école de Monte Grande</figcaption>
           </figure>
+          <h3>Pourquoi Chagüitillo ?</h3>
           <p>
             C’est à <strong>Chagüitillo</strong> que nous avons décidé d’œuvrer
             à la création d’une première bibliothèque publique car là existe une
@@ -129,8 +126,8 @@ class Home extends React.Component {
             plus vaste qui concerne la ville de Chagüitillo, la vallée de Sébaco
             et les 26 communautés indigènes qui s’y trouvent. Ainsi ont été
             construits un Collège, le Musée précolombien, un centre pour enfants
-            handicapés, etc (voir{" "}
-            <Link to="/partners">« Nos Partenaires »</Link>)… La bibliothèque
+            handicapés, etc… (voir{" "}
+            <Link to="/partners">« Nos Partenaires »</Link>) La bibliothèque
             participe naturellement à cette dynamique locale et contribue au
             développement culturel de toute la région et du pays.
           </p>

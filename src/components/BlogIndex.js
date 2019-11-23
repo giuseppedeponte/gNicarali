@@ -1,8 +1,8 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "./layout"
+import SEO from "./seo"
 import { rhythm } from "../utils/typography"
 
 class BlogIndex extends React.Component {
@@ -13,7 +13,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="Tous les articles" />
+        <SEO title="Nicarali en espagnol" />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -28,8 +28,10 @@ class BlogIndex extends React.Component {
                     {title}
                   </Link>
                 </h3>
-                <small>{node.frontmatter.lang}</small>
-                <small>{node.frontmatter.cover_url}</small>
+                <br />
+                {node.frontmatter.cover_url ? (
+                  <img src={node.frontmatter.cover_url} alt={title} />
+                ) : null}
               </header>
               <section>
                 <p
@@ -47,31 +49,3 @@ class BlogIndex extends React.Component {
 }
 
 export default BlogIndex
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(
-      sort: { fields: [fields___slug], order: DESC }
-      limit: 1000
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            lang
-            cover_url
-          }
-        }
-      }
-    }
-  }
-`
